@@ -5,6 +5,8 @@
  */
 package tallergitnetbeans;
 
+import javax.swing.JOptionPane;
+
 
 public class CalculadoraSimple extends javax.swing.JFrame {
 
@@ -136,6 +138,16 @@ public class CalculadoraSimple extends javax.swing.JFrame {
 
     private void btn_restaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_restaActionPerformed
         // TODO add your handling code here:
+	try{
+            double valor1 = Double.parseDouble(txt_valor1.getText());
+            double valor2 = Double.parseDouble(txt_valor2.getText());
+            
+            double resultado = valor1 - valor2;
+            
+            txt_resultado.setText(""+resultado);
+        }catch(NumberFormatException ex){
+            JOptionPane.showMessageDialog(null, "Debe ingresar un número", "Mensaje", JOptionPane.WARNING_MESSAGE);
+        }
     }//GEN-LAST:event_btn_restaActionPerformed
 
     private void btn_multiplicacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_multiplicacionActionPerformed
