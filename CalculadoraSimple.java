@@ -161,6 +161,15 @@ public class CalculadoraSimple extends javax.swing.JFrame {
 
     private void btn_multiplicacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_multiplicacionActionPerformed
         // TODO add your handling code here:
+        try{
+            double num1 = Double.parseDouble(txt_valor1.getText());
+            double num2 = Double.parseDouble(txt_valor2.getText());
+            double resultado = num1 * num2;
+            txt_resultado.setText(resultado+"");
+                        
+        }catch(NumberFormatException ex){
+            JOptionPane.showMessageDialog(null, "Debe ingresar los 2 numeros");
+        }
     }//GEN-LAST:event_btn_multiplicacionActionPerformed
 
     private void btn_divisionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_divisionActionPerformed
